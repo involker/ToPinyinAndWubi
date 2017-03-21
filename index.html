@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/Chinese2PinYin.js"></script>
+	<script type="text/javascript" src="js/wubi.js"></script>
+</head>
+<body>
+<input type="text" id="inp" />
+<input id="btn" type="button" value="点击">
+<script type="text/javascript">
+
+
+	$('#btn').on('click',function(){
+		// alert(query($('#inp').val();))
+		var value=$('#inp').val();
+		makeWb(value);
+		makePy(value);
+		//console.log("五笔:"+makeWb(value));
+		//console.log("拼音:"+makePy(value));
+		alert("五笔:"+makeWb(value)+",拼音:"+makePy(value))
+		
+	})
+</script>
+</body>
+</html>
